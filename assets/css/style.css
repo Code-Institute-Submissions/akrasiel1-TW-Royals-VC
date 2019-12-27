@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Muli', sans-serif;
+}
+
+
+/*** Navigation Menu ***/
+
+header {
+    background: url('../images/header-bg-2.jpg') no-repeat 25% 50%;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 10%;
+}
+
+.logo img {
+    height: 7.5rem;
+}
+
+
+.list-item {
+    display: inline-block;
+    line-height: 8rem;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+
+}
+
+.list-item a {
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 400;
+    transition: all .2s linear;
+}
+
+.list-item a:hover {
+    color: #f1de00;
+}
+
+.title {
+    font-size: 8rem;
+    width: 100%;
+    color: #fafafa;
+    font-weight: 700;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade-down 1.2s forwards 1.5s;
+    opacity: 0;
+    padding-left: 10%;
+}
+
+.title span {
+    font-size: 6rem;
+    display: block;
+    font-weight: 700;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fade-in 3.5s forwards 2.7s;
+    backface-visibility: hidden;
+}
+
+
+/*** Keyframes ***/
+
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        position: absolute;
+        top: 30%;
+    }
+
+    to {
+        opacity: 1;
+        position: absolute;
+        top: 40%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
