@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Tunbridge Wells Royals Volleyball Club - Home</title>
 </head>
 <body>
+    <!-- Header & Navigation Section -->
     <header>
         <nav>
             <a class="logo" href="index.html"><img src="./assets/images/logo-main.png" alt="TW Royals Logo"></a>
             <ul class="nav-list">
-                <li class="list-item"><a href="#">Home</a></li>
+                <li class="list-item active"><a href="#">Home</a></li>
                 <li class="list-item"><a href="#">The Club</a></li>
                 <li class="list-item"><a href="#">The Team</a></li>
                 <li class="list-item"><a href="#">Youth Academy</a></li>
@@ -23,5 +26,64 @@
             <span>#GoRoyals</span>
         </h1>
     </header>
+
+    <!-- Footer Section -->
+
+    <footer>
+
+        <!-- Logo & Social Links-->
+
+        <section class="social">
+            <a class="logo-footer" href="index.html"><img src="./assets/images/logo-footer-color.png" alt="TW Royals Logo"></a>
+            <h3>Connect with us!</h3>
+            <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube-square"></i></a>
+            </div>
+        </section>
+
+        <!-- Addresses -->
+        <section class="addresses">
+            <div class="addresses-office">
+                <h3>Main Office <i class="far fa-building"></i></h3>
+                <p>Broadwater House</p>
+                <p>Unit 7, North Farm Lane</p>
+                <p>Royal Tunbridge Wells</p>
+                <p>TN2 4EE</p>
+                <p>(+44) 01843 661 789</p>
+                <p>(+44) 01843 437 659</p>
+            </div>
+            <div class="addresses-venue">
+                <h3>Venue <i class="fas fa-map-marker-alt"></i></h3>
+                <p>The Wells Arena</p>
+                <p>Southborough Sports Complex</p>
+                <p>42, St. John's Road</p>
+                <p>Royal Tunbridge Wells</p>
+                <p>TN4 6DJ</p>
+                <p>info@twroyals.co.uk</p>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+
+        <section class="newsletter">
+            <form action="POST" id="newsletter">
+                <h3>Subscribe to our Newsletter</h3>
+                <input type="email" placeholder="E-mail" required>
+                <div class="checkbox">
+                    <input type="checkbox" name="accept" id="accept" required>
+                    <label for="accept">I consent to the processing of personal data and accept the <a class="privacy-policy" href="./assets/privacy policy/privacy policy.pdf" target="_blank">Privacy Policy</a></label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="credits">
+            <span>Copyright &copy; 2019. Designed and developed by Antonio Monda</span>
+        </section>
+    </footer>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,700|Saira+Condensed:200,400,700&display=swap');
 
 *,
 *::after,
@@ -17,7 +17,7 @@ html {
 /*** Navigation Menu ***/
 
 header {
-    background: url('../images/header-bg.jpg') no-repeat 25% 50%;
+    background: url('../images/header-bg-2.jpg') no-repeat 75% 60%;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -29,7 +29,10 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 10%;
+    padding: 1rem 5% 1rem 10%;
+    background-color: #424242;
+    position: fixed;
+    z-index: 2;
 }
 
 .logo img {
@@ -39,21 +42,27 @@ nav {
 
 .list-item {
     display: inline-block;
-    line-height: 8rem;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    line-height: 7.8rem;
+    font-size: 2rem;
+    transition: all .2s linear;
+}
 
+.list-item:not(:last-child) {
+    margin-right: 3.5rem;
+}
+
+.active {
+    border-bottom: solid 2px #fafafa;
 }
 
 .list-item a {
     text-decoration: none;
     color: #fafafa;
     font-weight: 400;
-    transition: all .2s linear;
 }
 
-.list-item a:hover {
-    color: #f1de00;
+.list-item:hover {
+    border-bottom: solid 2px #fafafa;
 }
 
 .title {
@@ -79,6 +88,91 @@ nav {
     animation: fade-in 3.5s forwards 2.7s;
     backface-visibility: hidden;
 }
+
+/*** Footer ***/
+
+footer {
+    padding: 5rem 10% 0 10%;
+    font-family: "Saira Condensed", sans-serif;
+    color: #fafafa;
+    background-color: #424242;
+    text-align: center;
+}
+
+.logo-footer img {
+    display: block;
+    margin: 0 auto;
+    height: 15rem;
+    padding-top: 3rem;
+}
+
+footer h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+}
+
+footer p {
+    font-size: 1.8rem;
+}
+
+.social-links{
+    font-size: 3rem;
+}
+
+.social-links a {
+    color: inherit;
+}
+
+.social-links a:not(:last-child) {
+    margin-right: 4.5rem;
+}
+
+.addresses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3rem 0;
+}
+
+.newsletter {
+    text-align: center;
+}
+
+input[type=email] {
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+    font-family: inherit;
+    text-align: inherit;
+    font-size: 1.6rem;
+}
+
+.checkbox {
+    font-size: 1.4rem;
+}
+
+.privacy-policy {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    background-color: #838383;
+    border: none;
+    padding: 1rem 5rem;
+    margin: 3rem 0;
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.credits {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+
 
 
 /*** Keyframes ***/
