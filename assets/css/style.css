@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,700|Saira+Condensed:200,400,700&display=swap');
 
+/*** General Styling Settings ***/
+
 *,
 *::after,
 *::before {
@@ -13,6 +15,9 @@ html {
     font-family: 'Muli', sans-serif;
 }
 
+section {
+    padding: 0 10%;
+}
 
 /*** Navigation Menu ***/
 
@@ -30,7 +35,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 5% 1rem 10%;
-    background-color: #424242;
+    background-color: rgba(250, 250, 250, .9);
     position: fixed;
     z-index: 2;
 }
@@ -52,20 +57,20 @@ nav {
 }
 
 .active {
-    border-bottom: solid 2px #fafafa;
+    border-bottom: solid 2px #1d2e7c;
 }
 
 .list-item a {
     text-decoration: none;
-    color: #fafafa;
+    color: #1d2e7c;
     font-weight: 400;
 }
 
 .list-item:hover {
-    border-bottom: solid 2px #fafafa;
+    border-bottom: solid 2px #1d2e7c;
 }
 
-.title {
+.hero {
     font-size: 8rem;
     width: 100%;
     color: #fafafa;
@@ -79,7 +84,7 @@ nav {
     padding-left: 10%;
 }
 
-.title span {
+.hero span {
     font-size: 6rem;
     display: block;
     font-weight: 700;
@@ -88,6 +93,82 @@ nav {
     animation: fade-in 3.5s forwards 2.7s;
     backface-visibility: hidden;
 }
+
+/*** MAIN SECTION - HOMEPAGE ***/
+
+    /*** News Section ***/
+
+.news {
+    width: 100%;
+    padding: 5rem 10%;
+    
+}
+
+.title {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 6rem;
+    color: #1d2e7c;
+    border-bottom: solid 3px #1d2e7c;
+}
+
+.news-cards {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.news-card {
+    width: calc(25% - 2rem);
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 3px;
+    backface-visibility: hidden;
+    position: relative;
+}
+
+.news-text p {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    padding: 1.5rem 3rem;
+    height: 33%;
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.news-bg-1 {
+    background: url(../images/news-1.jpg) 70% 60% no-repeat;
+}
+
+.news-bg-2 {
+    background: url(../images/news-2.jpg) 70% 60% no-repeat;
+}
+
+.news-bg-3 {
+    background: url(../images/news-3.jpg) 70% 60% no-repeat;
+}
+
+.news-bg-4 {
+    background: url(../images/news-4.jpg) center no-repeat;
+}
+
+[class*="news-bg-"] {
+    background-size: cover;
+    box-shadow: 2px 5px 5px #000;
+    transition: all .3s ease-in-out;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.news-card:hover [class*="news-bg-"], 
+.news-card:focus [class*="news-bg-"]{
+    transform: scale(1.1);
+}
+
 
 /*** Footer ***/
 
@@ -169,7 +250,7 @@ button {
 
 .credits {
     font-size: 1.2rem;
-    padding-bottom: 1rem;
+    padding: 3rem 0;
 }
 
 
