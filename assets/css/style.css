@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,700|Saira+Condensed:200,400,700&display=swap');
 
-/*** General Styling Settings ***/
+/*** General Settings & Utilities***/
 
 *,
 *::after,
@@ -13,10 +13,11 @@
 html {
     font-size: 62.5%;
     font-family: 'Muli', sans-serif;
+    background-color: #e6e6e6;
 }
 
-section {
-    padding: 0 10%;
+.padded {
+    padding: 6rem 10%;
 }
 
 /*** Navigation Menu ***/
@@ -37,7 +38,7 @@ nav {
     padding: 1rem 5% 1rem 10%;
     background-color: rgba(250, 250, 250, .9);
     position: fixed;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo img {
@@ -99,9 +100,7 @@ nav {
     /*** News Section ***/
 
 .news {
-    width: 100%;
-    padding: 5rem 10%;
-    
+    width: 100%;  
 }
 
 .title {
@@ -131,11 +130,11 @@ nav {
     position: absolute;
     bottom: 0;
     z-index: 2;
-    padding: 1.5rem 3rem;
-    height: 33%;
+    padding: 1.5rem 1rem;
+    height: 35%;
     color: #fafafa;
     background-color: rgba(0, 0, 0, .8);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 
@@ -169,11 +168,75 @@ nav {
     transform: scale(1.1);
 }
 
+/*** Next Match & League Table Styling ***/
 
+.league-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.match-card {
+    position: relative;
+}
+
+.match-card h4 {
+    font-family: "Saira Condensed", sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1d2e7c;
+    margin: 4rem 0;
+}
+
+.match-card a {
+    
+    text-decoration: none;
+    color: #fafafa;
+    background-color: #1d2e7c;
+    padding: 1rem 2.5rem;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 145%);
+    transition: all .2s ease-in-out;
+}
+
+.match-card a:hover {
+    box-shadow: 1px 3px 5px #000;
+}
+
+.next-match, .league-table {
+    width: calc(50% - 2rem);
+}
+
+.team-one img, .team-two img{
+    height: 15rem;
+}
+
+.team-one p, .team-two p{
+    font-size: 1.8rem;
+    text-align: center;
+    color: #1d2e7c;
+    font-weight: 700;
+}
+
+.vs {
+    font-size: 4rem;
+    color: #1d2e7c;
+}
+
+.match-day {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 /*** Footer ***/
 
 footer {
-    padding: 5rem 10% 0 10%;
     font-family: "Saira Condensed", sans-serif;
     color: #fafafa;
     background-color: #424242;
@@ -185,10 +248,11 @@ footer {
     margin: 0 auto;
     height: 15rem;
     padding-top: 3rem;
+    opacity: .6;
 }
 
 footer h3 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -196,7 +260,7 @@ footer h3 {
 }
 
 footer p {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .social-links{
@@ -231,7 +295,7 @@ input[type=email] {
 }
 
 .checkbox {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .privacy-policy {
@@ -250,8 +314,11 @@ button {
 
 .credits {
     font-size: 1.2rem;
-    padding: 3rem 0;
+    padding-top: 4rem;
+    margin-bottom: -3rem;
 }
+
+
 
 
 
@@ -280,6 +347,10 @@ button {
         opacity: 1;
     }
 }
+
+
+
+/*** Media Queries ***/
 
 
 
