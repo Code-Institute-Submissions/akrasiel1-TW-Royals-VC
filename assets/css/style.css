@@ -20,6 +20,10 @@ html {
     padding: 6rem 10%;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 /*** Navigation Menu ***/
 
 header {
@@ -190,6 +194,10 @@ nav {
     margin: 4rem 0;
 }
 
+.match-card h4 span {
+    font-size: 3.2rem;
+}
+
 .match-card a {
     
     text-decoration: none;
@@ -200,7 +208,7 @@ nav {
     position: absolute;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 145%);
+    transform: translate(-50%, 250%);
     transition: all .2s ease-in-out;
 }
 
@@ -226,6 +234,7 @@ nav {
 .vs {
     font-size: 4rem;
     color: #1d2e7c;
+    font-weight: 700;
 }
 
 .match-day {
@@ -234,6 +243,57 @@ nav {
     align-items: center;
     justify-content: space-evenly;
 }
+
+/*** League Table Styiling ***/
+
+.table-container {
+    padding-top: 5rem;
+}
+
+.table-main {
+    border: 1px solid #1D2E7C;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    border-collapse: collapse;
+    padding-top: 3rem;
+  }
+  .table-main td, .table-main th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  .table-main tbody td {
+    font-size: 1.6rem;
+  }
+  .table-main tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  .table-main thead {
+    background: #1D2E7C;
+    background: -moz-linear-gradient(top, #55629d 0%, #334389 66%, #1D2E7C 100%);
+    background: -webkit-linear-gradient(top, #55629d 0%, #334389 66%, #1D2E7C 100%);
+    background: linear-gradient(to bottom, #55629d 0%, #334389 66%, #1D2E7C 100%);
+    border-bottom: 2px solid #444444;
+  }
+  .table-main thead th {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fafafa;
+    text-align: center;
+    border-left: 2px solid #D0E4F5;
+  }
+  .table-main thead th:first-child {
+    border-left: none;
+  }
+
+  tr td img {
+      height: 4rem;
+      vertical-align: middle;
+      padding-right: 1rem;
+  }
+
+
 /*** Footer ***/
 
 footer {
