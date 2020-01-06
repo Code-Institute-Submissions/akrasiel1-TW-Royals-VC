@@ -26,7 +26,7 @@ html {
 
 /*** Navigation Menu ***/
 
-header {
+#homepage {
     background: url('../images/header-bg-2.jpg') no-repeat 75% 60%;
     background-size: cover;
     height: 100vh;
@@ -251,47 +251,78 @@ nav {
 }
 
 .table-main {
-    border: 1px solid #1D2E7C;
-    background-color: #EEEEEE;
+    border: 1px solid #1d2e7C;
+    background-color: #eeeeee;
     width: 100%;
     height: 50rem;
     text-align: center;
     border-collapse: collapse;
     padding-top: 3rem;
   }
-  .table-main td, .table-main th {
-    border: 1px solid #AAAAAA;
+
+.table-main td, .table-main th {
+    border: 1px solid #aaaaaa;
     padding: 3px 2px;
   }
-  .table-main tbody td {
+
+.table-main tbody td {
     font-size: 1.6rem;
   }
-  .table-main tr:nth-child(even) {
-    background: #D0E4F5;
+
+.table-main tr:nth-child(even) {
+    background: #d0e4f5;
   }
-  .table-main thead {
-    background: #1D2E7C;
-    background: -moz-linear-gradient(top, #55629d 0%, #334389 66%, #1D2E7C 100%);
-    background: -webkit-linear-gradient(top, #55629d 0%, #334389 66%, #1D2E7C 100%);
-    background: linear-gradient(to bottom, #55629d 0%, #334389 66%, #1D2E7C 100%);
-    border-bottom: 2px solid #444444;
+
+.table-main thead {
+    background: #1d2e7c;
+    background: -moz-linear-gradient(top, #55629d 0%, #334389 66%, #1d2e7c 100%);
+    background: -webkit-linear-gradient(top, #55629d 0%, #334389 66%, #1d2e7c 100%);
+    background: linear-gradient(to bottom, #55629d 0%, #334389 66%, #1d2e7c 100%);
   }
-  .table-main thead th {
+  
+.table-main thead th {
     font-size: 1.8rem;
     font-weight: 700;
     color: #fafafa;
     text-align: center;
-    border-left: 2px solid #D0E4F5;
+    border-left: 2px solid #d0e4f5;
   }
-  .table-main thead th:first-child {
+  
+.table-main thead th:first-child {
     border-left: none;
   }
 
-  tr td img {
+tr td img {
       height: 4rem;
       vertical-align: middle;
-      padding-right: 1rem;
+      padding-right: 2rem;
   }
+
+tbody tr td:nth-child(1) {
+      text-align: left;
+      padding-left: 8rem;
+  }
+
+tbody .bold {
+      font-weight: 700;
+  }
+
+/*** Sponsors Section ***/
+
+.sponsors-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+}
+
+.sponsors-container img {
+    height: 18rem;
+    margin: 0 2rem;
+}
+
+
 
 
 /*** Footer ***/
