@@ -12,13 +12,13 @@
 <body>
     <!-- HEADER & NAVIGATION -->
     <header id="homepage">
-        <nav>
+        <nav class="flex-row">
             <a class="logo" href="index.html"><img src="./assets/images/logo-main.png" alt="TW Royals Logo"></a>
             <ul class="nav-list">
                 <li class="list-item active"><a href="#">Home</a></li>
                 <li class="list-item"><a href="#">The Club</a></li>
                 <li class="list-item"><a href="team.html">The Team</a></li>
-                <li class="list-item"><a href="#">Youth Academy</a></li>
+                <li class="list-item"><a href="youth.html">Youth Academy</a></li>
                 <li class="list-item"><a href="#">Contacts</a></li>
             </ul>
         </nav>
@@ -36,7 +36,7 @@
 
         <section class="news padded">
             <h2 class="title">News</h2>
-            <div class="news-cards">
+            <div class="news-cards flex-row">
                 <div class="news-card">
                     <a href="#" class="news-bg-1"></a>
                     <a href="#" class="news-text"><p>We say farewell to 2019 with another victory: 3-2 at Ramsgate's expenses in nail-biting contest.</p></a>
@@ -58,12 +58,12 @@
 
         <!-- League Info Section -->
 
-        <section class="league-info padded">
+        <section class="league-info padded flex-row">
             <div class="next-match">
                 <h3 class="title">Next Match</h3>
                 <div class="match-card">
                     <h4><span>Kent Superleague - Round 6</span><br>Saturday, 19<sup>th</sup> January</h4>
-                    <div class="match-day">
+                    <div class="match-day flex-row">
                         <div class="team-one">
                             <img src="./assets/images/club logos/maidstone.png" alt="Maidstone">
                             <p>Maidstone Acers</p>
@@ -164,11 +164,21 @@
             </div>
         </section>
 
+        <!-- Shop Section -->
+
+        <section class="shop padded">
+            <h3 class="title">Store</h3>
+            <div class="showcase-container">
+                <img class="shop-showcase" src="./assets/images/kits.jpg" alt="Kits Showcase">
+                <a href="#">Go to shop &rarr;</a>
+            </div>
+        </section>
+
         <!-- Sponsors Section-->
 
         <section class="sponsors padded">
             <h3 class="title">Official Partners</h3>
-            <div class="sponsors-container">
+            <div class="sponsors-container flex-row">
                 <img src="./assets/images/sponsors/twa.png" alt="TW Alliance Logo">
                 <img src="./assets/images/sponsors/twbc.png" alt="TW Borough Council Logo">
                 <img src="./assets/images/sponsors/nfu.png" alt="NFU Logo">
@@ -182,6 +192,7 @@
 
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -202,7 +213,7 @@
         </section>
 
         <!-- Addresses -->
-        <section class="addresses">
+        <section class="addresses flex-row">
             <div>
                 <h3>Main Office <i class="fas fa-map-marker-alt"></i></h3>
                 <p>Broadwater House</p>

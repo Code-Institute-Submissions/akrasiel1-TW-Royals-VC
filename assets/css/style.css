@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,700|Saira+Condensed:200,400,700&display=swap');
 
-/*** General Settings & Utilities***/
+/*** General Settings & Utility Classes ***/
 
 *,
 *::after,
@@ -24,6 +24,16 @@ html {
     text-transform: uppercase;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 /*** Navigation Menu ***/
 
 #homepage {
@@ -43,8 +53,6 @@ html {
 nav {
     width: 100%;
     height: 9rem;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 1rem 5% 1rem 10%;
     background-color: rgba(250, 250, 250, .9);
@@ -94,6 +102,7 @@ nav {
     animation: fade-down 1.2s forwards 1.5s;
     opacity: 0;
     padding-left: 10%;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .hero span {
@@ -103,6 +112,16 @@ nav {
     margin-top: 2rem;
     opacity: 0;
     animation: fade-in 3.5s forwards 2.7s;
+    backface-visibility: hidden;
+}
+
+.hero .second {
+    font-size: 4.5rem;
+    display: block;
+    font-weight: 700;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fade-in 3.5s forwards 4s;
     backface-visibility: hidden;
 }
 
@@ -123,8 +142,6 @@ nav {
 
 .news-cards {
     padding-top: 6rem;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -183,10 +200,9 @@ nav {
 
 .league-info {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
+
 .match-card {
     position: relative;
 }
@@ -245,8 +261,6 @@ nav {
 }
 
 .match-day {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -314,11 +328,41 @@ tbody .bold {
       font-weight: 700;
   }
 
+/*** Shop Section ***/
+
+.showcase-container {
+    position: relative;
+}
+
+.shop-showcase {
+    margin-top: 5rem;
+    width: 100%;
+    height: auto;
+}
+
+.showcase-container a:link,
+.showcase-container a:visited {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 1.4vw;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 700;
+    background-color: rgba(29, 46, 124, .4);
+    padding: 1rem 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.showcase-container a:hover {
+    background-color: rgba(29, 46, 124, .7);
+}
+
+
 /*** Sponsors Section ***/
 
 .sponsors-container {
-    display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding-top: 5rem;
@@ -330,9 +374,9 @@ tbody .bold {
 }
 
 
-/*** Team Players Section ***/
+/*** Team Players & Staff Section ***/
 
-.players-container {
+.players-container, .staff-container {
     padding: 5rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -340,8 +384,8 @@ tbody .bold {
 
 }
 
-.players-card {
-    width: 30rem;
+.players-card, .staff-card {
+    width: 25rem;
     position: relative;
     overflow: hidden;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, .8);
@@ -349,23 +393,23 @@ tbody .bold {
     margin: 0 2rem 5rem 2rem;
 }
 
-.players-name {
+.players-name, .staff-name {
     text-decoration: none;
     color: #fafafa;
 }
 
-.players-info {
+.players-info, .staff-info {
     height: 100%;
     color: #fafafa;
 }
 
-.players-info  img{
+.players-info  img, .staff-info img{
     width: 100%;
     overflow: hidden;
     transition: all .3s ease-in-out;
 }
 
-.players-name h3 {
+.players-name h3, .staff-name h3 {
     background-color: #1d2e7C;
     text-align: center;
     text-transform: uppercase;
@@ -376,10 +420,125 @@ tbody .bold {
     z-index: 2;
 }
 
-.players-card:hover .players-info img{
+.players-card:hover .players-info img, .staff-card:hover .staff-info img{
     transform: scale(1.05);
 }
 
+/*** Player Card Popup ***/
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 4;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup-content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-close:link,
+.popup-close:visited {
+    color: #1d2e7c;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.popup-content {
+    width: 60%;
+    background-color: #d0e4f5;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    align-items: center;
+    transition: all .4s .3s;
+}
+
+.popup-left {
+    width: 50%;
+}
+
+.popup-right {
+    width: 50%;
+    padding: 0 5rem;
+    
+}
+
+.popup-right h2, .popup-right h3{
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 400;
+    color: #1d2e7c;
+    text-align: center;
+    border-bottom: solid 2px #1d2e7c;
+}
+
+.popup-right h2 {
+    font-size: 4.2rem;
+}
+
+.popup-right h3 {
+    font-size: 3.5rem;
+}
+
+
+.popup-image {
+    display: block;
+    width: 100%;
+}
+
+.popup-bio .flex-row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-bio .flex-row img{
+    height: 3.5rem;
+}
+
+.popup-bio .flex-row p:first-child {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+.popup-bio p {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    color:#1d2e7c;
+}
+
+
+/*** Youth Academy Section ***/
+
+#youth {
+    background: url('../images/youth-bg.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
 
 
 
@@ -431,8 +590,6 @@ footer p {
 }
 
 .addresses {
-    display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     padding: 3rem 0;
 }
@@ -507,8 +664,44 @@ button {
 
 /*** Media Queries ***/
 
+/* @media (min-width: 320px) {
+    html {
+        font-size: 40%;
+    }
 
+    .padded {
+        padding: 3rem 5%;
+    }
 
+    .hero {
+        font-size: 6.5rem;
+    }
 
+    .hero span {
+        font-size: 4rem;
+    }
 
+    .players-card, .staff-card {
+        width: 18rem;
+        margin: 0 1rem 2.5rem 1rem;
+    }    
+
+    .players-name h3, .staff-name h3 {
+        font-size: 1.5rem;
+    }    
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (min-width: 992px) {
+    
+}
+
+ */
 
