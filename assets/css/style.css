@@ -115,15 +115,6 @@ nav {
     backface-visibility: hidden;
 }
 
-.hero .second {
-    font-size: 4.5rem;
-    display: block;
-    font-weight: 700;
-    margin-top: 2rem;
-    opacity: 0;
-    animation: fade-in 3.5s forwards 4s;
-    backface-visibility: hidden;
-}
 
 /*** MAIN SECTION - HOMEPAGE ***/
 
@@ -140,60 +131,59 @@ nav {
     border-bottom: solid 3px #1d2e7c;
 }
 
-.news-cards {
-    padding-top: 6rem;
-    justify-content: space-between;
+.news-container {
+    display: grid;
+    grid-gap: 2rem;
+    height: 70rem;
+    padding-top: 5rem;
 }
 
-.news-card {
-    width: calc(25% - 2rem);
-    height: 40rem;
-    overflow: hidden;
-    border-radius: 3px;
-    backface-visibility: hidden;
+.news-item {
+    display: block;
+    color: #fafafa;
     position: relative;
-}
+    text-decoration: none;
+  }
 
-.news-text p {
+  .news-item h3 {
     position: absolute;
     bottom: 0;
-    z-index: 2;
-    padding: 1.5rem 1rem;
-    height: 35%;
-    color: #fafafa;
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 1.6rem;
+    left: 0;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, .7);
     font-weight: 700;
-}
-
-.news-bg-1 {
-    background: url(../images/news-1.jpg) 70% 60% no-repeat;
-}
-
-.news-bg-2 {
-    background: url(../images/news-2.jpg) 70% 60% no-repeat;
-}
-
-.news-bg-3 {
-    background: url(../images/news-3.jpg) 70% 60% no-repeat;
-}
-
-.news-bg-4 {
-    background: url(../images/news-4.jpg) center no-repeat;
-}
-
-[class*="news-bg-"] {
-    background-size: cover;
-    box-shadow: 2px 5px 5px #000;
+    text-transform: uppercase;
     transition: all .3s ease-in-out;
-    height: 100%;
-    width: 100%;
-    display: block;
 }
 
-.news-card:hover [class*="news-bg-"], 
-.news-card:focus [class*="news-bg-"]{
-    transform: scale(1.1);
+  .item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background: url("../images/news-1.jpg") no-repeat 70% 20%;
+    font-size: 2rem;  
+  }
+  
+  .item2 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    background: url("../images/news-2.jpg") no-repeat 50% 10%;
+    font-size: 1.8rem;
+  }
+
+  .item3, .item4 {
+      font-size: 1.4rem;
+  }
+
+  .item3 {
+      background: url("../images/news-3.jpg") no-repeat center;
+  }
+
+  .item4 {
+    background: url("../images/news-4.jpg") no-repeat center;
+}
+
+  [class*="item"] {
+      background-size: cover;
 }
 
 /*** Next Match & League Table Styling ***/
@@ -265,7 +255,7 @@ nav {
     justify-content: space-evenly;
 }
 
-/*** League Table Styiling ***/
+/*** League Table Styling ***/
 
 .table-container {
     padding-top: 5rem;
@@ -321,7 +311,7 @@ tr td img {
 
 tbody tr td:nth-child(1) {
       text-align: left;
-      padding-left: 8rem;
+      padding-left: 5rem;
   }
 
 tbody .bold {
@@ -661,47 +651,168 @@ button {
 }
 
 
-
 /*** Media Queries ***/
 
-/* @media (min-width: 320px) {
+ @media (min-width: 320px) {
+    /*** General settings and utilities ***/
+
     html {
         font-size: 40%;
     }
+
 
     .padded {
         padding: 3rem 5%;
     }
 
+    /*** Navigation & Hero Section ***/
     .hero {
-        font-size: 6.5rem;
+        font-size: 6rem;
     }
 
     .hero span {
         font-size: 4rem;
     }
 
-    .players-card, .staff-card {
-        width: 18rem;
-        margin: 0 1rem 2.5rem 1rem;
-    }    
+    /*** News Section ***/
 
-    .players-name h3, .staff-name h3 {
-        font-size: 1.5rem;
-    }    
+    .news-container {
+        grid-template-columns: 1fr;
+        height: 150rem;
+    }
+
+    .item1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .item2 {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+        background: url("../images/news-2.jpg") no-repeat 50% 25%;
+        font-size: 1.8rem;
+      }
+
+    .item1, .item2, .item3, .item4 {
+        font-size: 2rem;
+      }
+
+
+    /*** Next Match & League Table ***/
+
+    .league-info {
+        display: block;
+    }
+
+    .next-match {
+        padding-bottom: 6rem;
+    }
+
+    .next-match, .league-table {
+        width: 100%;
+    }
+
+    .match-card a {
+        transform: translate(-50%, 150%);
+    }
+
+    /*** Sponsors Section ***/
+
+    .sponsors-container img {
+        height: 13rem;
+    }
 }
 
 @media (min-width: 576px) {
+    html {
+        font-size: 45%;
+    }
 
+    /*** Sponsors Section ***/
+
+    .sponsors-container img {
+        height: 14rem;
+    }
 }
 
 @media (min-width: 768px) {
-    
+
+    html {
+        font-size: 52.5%;
+    }
+
+    .padded {
+        padding: 6rem 10%;
+    }
+
+    /*** News Section ***/
+
+    .news-container {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        height: 90rem;
+    }
+
+    /*** Sponsors Section ***/
+
+     .sponsors-container img {
+        height: 16rem;
+    }
 }
 
 @media (min-width: 992px) {
     
 }
 
- */
+@media (min-width: 1024px) {
 
+       /*** Next Match & League Table ***/
+
+       .league-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .next-match, .league-table {
+        width: calc(50% - 2rem);
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+    /*** News Section ***/
+
+    .news-container {
+        height: 70rem;
+        grid-template-columns: none;
+        grid-gap: 4rem;
+    }
+
+    .item1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        background: url("../images/news-1.jpg") no-repeat 70% 20%;
+        font-size: 2rem;  
+      }
+      
+      .item2 {
+        grid-column: 3 / span 2;
+        grid-row: 1;
+        background: url("../images/news-2.jpg") no-repeat 50% 10%;
+        font-size: 1.8rem;
+      }
+    
+      .item3, .item4 {
+          font-size: 1.4rem;
+      }
+
+      .news-item:hover h3 {
+          background-color: rgba(0, 0, 0, .9);
+      }
+}
