@@ -320,35 +320,66 @@ tbody .bold {
 
 /*** Shop Section ***/
 
-.showcase-container {
+.kit-container {
+    padding: 5rem 0;
+}
+
+.kit-hero {
+    height: 90rem;
+    background: url("../images/kits/kit-hero-lg.png") 0 100% no-repeat;
+    background-size: cover;
     position: relative;
 }
 
-.shop-showcase {
-    margin-top: 5rem;
-    width: 100%;
-    height: auto;
-}
-
-.showcase-container a:link,
-.showcase-container a:visited {
-    position: absolute;
-    right: 2%;
-    bottom: 2%;
+.shop-link {
+    font-size: 4rem;
     color: #fafafa;
     text-decoration: none;
-    font-size: 1.4vw;
-    font-family: "Saira Condensed", sans-serif;
     font-weight: 700;
-    background-color: rgba(29, 46, 124, .4);
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 1rem 1.5rem;
+}
+
+.kit-home {
+    background: url("../images/kits/kit-home.png") center no-repeat;
+}
+
+.kit-away {
+    background: url("../images/kits/kit-away.png") center no-repeat;
+}
+
+.kit-libero {
+    background: url("../images/kits/kit-libero.png") center no-repeat;
+}
+
+.kit-showcase {
+    justify-content: space-between;
+    
+}
+
+.kit-showcase [class*="kit-"] {
+    background-size: cover;
+    height: 50rem;
+    width: calc(33% - 1rem);
+    text-decoration: none;
+    position: relative;
+}
+
+.kit-showcase [class*="kit-"] h4{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    color: #fafafa;
+    position: absolute;
+    bottom: 0%;
     padding: 1rem 2rem;
-    transition: all .2s ease-in-out;
+    background-color: rgba(0, 0, 0, .7);
 }
-
-.showcase-container a:hover {
-    background-color: rgba(29, 46, 124, .7);
-}
-
 
 /*** Sponsors Section ***/
 
@@ -716,6 +747,18 @@ button {
         transform: translate(-50%, 150%);
     }
 
+    /*** Shop Section ***/
+
+    .kit-hero {
+        height: 45rem;
+        background: url("../images/kits/kit-hero-sm.png") 0 100% no-repeat;
+        margin-bottom: 0;
+    }
+
+    .kit-showcase {
+        display: none;
+    }
+
     /*** Sponsors Section ***/
 
     .sponsors-container img {
@@ -726,6 +769,13 @@ button {
 @media (min-width: 576px) {
     html {
         font-size: 45%;
+    }
+
+    /*** Shop Section ***/
+
+    .kit-hero {
+        height: 60rem;
+        background: url("../images/kits/kit-hero-md.png") 0 100% no-repeat;
     }
 
     /*** Sponsors Section ***/
@@ -753,6 +803,13 @@ button {
         height: 90rem;
     }
 
+     /*** Shop Section ***/
+
+     .kit-hero {
+        height: 50rem;
+        background: url("../images/kits/kit-hero-md.png") 0 100% no-repeat;
+    }
+
     /*** Sponsors Section ***/
 
      .sponsors-container img {
@@ -761,14 +818,27 @@ button {
 }
 
 @media (min-width: 992px) {
-    
+        /*** Shop Section ***/
+
+        .kit-hero {
+            height: 85rem;
+            background: url("../images/kits/kit-hero-lg.png") 5% 100% no-repeat;
+            margin-bottom: 2rem;
+            background-size: cover;
+        }
+
+        .kit-showcase {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 }
 
 @media (min-width: 1024px) {
 
-       /*** Next Match & League Table ***/
+    /*** Next Match & League Table ***/
 
-       .league-info {
+    .league-info {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -777,6 +847,7 @@ button {
     .next-match, .league-table {
         width: calc(50% - 2rem);
     }
+
 
 }
 
@@ -814,5 +885,9 @@ button {
 
       .news-item:hover h3 {
           background-color: rgba(0, 0, 0, .9);
+      }
+
+      .kit-container {
+          grid-template-columns: repeat(4, 1fr);
       }
 }
