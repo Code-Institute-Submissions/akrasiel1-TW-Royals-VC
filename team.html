@@ -12,7 +12,30 @@
 <body>
     <!-- HEADER & NAVIGATION -->
     <header id="team">
-        <nav class="flex-row">
+
+        <!-- Navigation for Mobile & Tablets-->
+
+        <div class="navigation-mobile">
+            <a class="logo" href="index.html"><img src="./assets/images/club logos/logo-footer-color.png" alt="TW Royals Logo"></a>
+                <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation-button">
+                    <span class="navigation-icon">&nbsp;</span>
+                </label>
+            <div class="navigation-background">&nbsp;</div>
+                <nav class="nav-sm">
+                    <ul class="nav-list-sm">
+                    <li class="nav-item-sm"><a href="index.html" class="nav-link-sm">Home</a></li>
+                    <li class="nav-item-sm"><a href="#" class="nav-link-sm">The Club</a></li>
+                    <li class="nav-item-sm"><a href="team.html" class="nav-link-sm">The Team</a></li>
+                    <li class="nav-item-sm"><a href="youth.html" class="nav-link-sm">Youth Academy</a></li>
+                    <li class="nav-item-sm"><a href="" class="nav-link-sm">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Navigation for Desktop-->
+        
+        <nav class=" navigation-desktop flex-row">
             <a class="logo" href="index.html"><img src="./assets/images/logo-main.png" alt="TW Royals Logo"></a>
             <ul class="nav-list">
                 <li class="list-item"><a href="index.html">Home</a></li>
@@ -690,11 +713,12 @@
     <div class="popup" id="staff-2">
         <div class="popup-content flex-row">
             <div class="popup-left">
-                <img class="popup-image" src="./assets/images/staff/staff-2.jpg" alt="Player Photo">
+                <img class="popup-image" src="./assets/images/staff/staff-2.jpg" alt="Ross Gowler">
             </div>
             <div class="popup-right">
                 <a href="#staff" class="popup-close">&times;</a>
                 <h2>Ross Gowler</h2>
+                <img class="staff-inner" src="./assets/images/staff/staff-2.jpg" alt="Ross Gowler">
                 <div class="popup-bio flex-column">
                     <div class="flex-row">
                         <p>Date of birth: </p>
@@ -717,11 +741,12 @@
     <div class="popup" id="staff-3">
         <div class="popup-content flex-row">
             <div class="popup-left">
-                <img class="popup-image" src="./assets/images/staff/staff-3.jpg" alt="Player Photo">
+                <img class="popup-image" src="./assets/images/staff/staff-3.jpg" alt="Louis Nelmes">
             </div>
             <div class="popup-right">
                 <a href="#staff" class="popup-close">&times;</a>
                 <h2>Louis Nelmes</h2>
+                <img class="staff-inner" src="./assets/images/staff/staff-3.jpg" alt="Louis Nelmes">
                 <div class="popup-bio flex-column">
                     <div class="flex-row">
                         <p>Date of birth: </p>
@@ -730,7 +755,7 @@
                     
                     <div class="flex-row">
                         <p>Role: </p>
-                        <p>Physio</p>
+                        <p>Fitness Coach/Physio</p>
                     </div>
 
                     <h3>Bio</h3>
@@ -744,11 +769,12 @@
     <div class="popup" id="staff-4">
         <div class="popup-content flex-row">
             <div class="popup-left">
-                <img class="popup-image" src="./assets/images/staff/staff-4.jpg" alt="Player Photo">
+                <img class="popup-image" src="./assets/images/staff/staff-4.jpg" alt="Anna Nolan">
             </div>
             <div class="popup-right">
                 <a href="#staff" class="popup-close">&times;</a>
-                <h2>Anna Nolan-Ortiz</h2>
+                <h2>Anna Nolan</h2>
+                <img class="staff-inner" src="./assets/images/staff/staff-4.jpg" alt="Anna Nolan">
                 <div class="popup-bio flex-column">
                     <div class="flex-row">
                         <p>Date of birth: </p>

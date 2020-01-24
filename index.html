@@ -11,11 +11,36 @@
 </head>
 <body>
     <!-- HEADER & NAVIGATION -->
+
+    
     <header id="homepage">
-        <nav class="flex-row">
+
+        <!-- Navigation for Mobile & Tablets-->
+
+        <div class="navigation-mobile">
+            <a class="logo" href="index.html"><img src="./assets/images/club logos/logo-footer-color.png" alt="TW Royals Logo"></a>
+            <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation-button">
+                <span class="navigation-icon">&nbsp;</span>
+            </label>
+            <div class="navigation-background">&nbsp;</div>
+            <nav class="nav-sm">
+                <ul class="nav-list-sm">
+                    <li class="nav-item-sm"><a href="index.html" class="nav-link-sm">Home</a></li>
+                    <li class="nav-item-sm"><a href="#" class="nav-link-sm">The Club</a></li>
+                    <li class="nav-item-sm"><a href="team.html" class="nav-link-sm">The Team</a></li>
+                    <li class="nav-item-sm"><a href="youth.html" class="nav-link-sm">Youth Academy</a></li>
+                    <li class="nav-item-sm"><a href="" class="nav-link-sm">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Navigation for Desktop-->
+        
+        <nav class="navigation-desktop flex-row">
             <a class="logo" href="index.html"><img src="./assets/images/logo-main.png" alt="TW Royals Logo"></a>
             <ul class="nav-list">
-                <li class="list-item active"><a href="#">Home</a></li>
+                <li class="list-item active"><a href="index.html">Home</a></li>
                 <li class="list-item"><a href="#">The Club</a></li>
                 <li class="list-item"><a href="team.html">The Team</a></li>
                 <li class="list-item"><a href="youth.html">Youth Academy</a></li>
@@ -26,6 +51,7 @@
             <span>#GoRoyals</span>
         </h1>
     </header>
+
 
 
     <!-- MAIN SECTION - HOMEPAGE -->
@@ -61,6 +87,7 @@
         <!-- League Info Section -->
 
         <section class="league-info padded flex-row">
+            <!-- Next Match -->
             <div class="next-match">
                 <h2 class="title">Next Match</h2>
                 <div class="match-card">
@@ -80,6 +107,8 @@
                     <a href="#">Buy Tickets</a>
                 </div>
             </div>
+
+            <!-- League Table -->
             <div class="league-table">
                 <h2 class="title">League Table</h2>
                 <div class="table-container">
