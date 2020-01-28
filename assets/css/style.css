@@ -169,14 +169,7 @@ html {
 /*** Navigation Menu - Desktop ***/
 
 #homepage {
-    background: url('../images/header-bg-2.jpg') no-repeat 75% 60%;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
-
-#team {
-    background: url('../images/team-bg.jpg') no-repeat 60% 50%;
+    background: url('../images/hero/hero-home.jpg') no-repeat 75% 10%;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -528,8 +521,25 @@ tbody .bold {
     margin: 0 2rem;
 }
 
+/*** Club History Section ***/
+
+#history {
+    background: url('../images/hero/hero-history.jpg') no-repeat 60% 0;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+
 
 /*** Team Players & Staff Section ***/
+
+#team {
+    background: url('../images/hero/hero-team.jpg') no-repeat 60% 50%;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
 
 .players-container, .staff-container {
     padding: 5rem 0;
@@ -682,7 +692,7 @@ tbody .bold {
 /*** Youth Academy Section ***/
 
 #youth {
-    background: url('../images/youth-bg.jpg') no-repeat center;
+    background: url('../images/hero/hero-youth.jpg') no-repeat 75% 0;
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -932,17 +942,26 @@ button {
         padding-bottom: 3rem;
     }
 
-    /*** Youth Academy Section ***/
-    .youth-article .title {
-        font-size: 5rem;
+    /*** Youth Academy & Club History Section ***/
+
+    .figure-left, .figure-right {
+        display: block;
     }
 
-    .kids-vb, .kids-park {
+    .figure-left img, .figure-right img {
         display: block;
         width: 100%;
         height: auto;
-        margin-bottom: 2rem;
     }
+
+    figcaption {
+        text-align: center;
+        color: #1d2e7c;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+
 }
 
 @media (min-width: 576px) {
@@ -996,28 +1015,6 @@ button {
         width: 60%;
     }
 
-    /*** Youth Academy Section ***/
-
-    .youth-article .title {
-        font-size: 6rem;
-    }
-
-    .kids-vb, .kids-park {
-        display: inline-block;
-        height: 35rem;
-        width: auto;
-    }
-    
-    .kids-vb {
-        float: left;
-        margin-right: 2rem;
-        margin-top: 2rem;
-    }
-    
-    .kids-park {
-        float: right;
-        margin-left: 2rem;
-    }
 }
 
 @media (min-width: 768px) {
@@ -1058,6 +1055,23 @@ button {
 
      .sponsors-container img {
         height: 16rem;
+    }
+
+    /*** Youth Academy & Club History Section ***/
+
+    .figure-left {
+        float: left;
+        margin-top: 2.5rem;
+        margin-right: 2rem;
+    }
+    .figure-right {
+        float: right;
+        margin-left: 2rem;
+    }
+
+    .figure-left img, .figure-right img {
+        height: 32rem;
+        width: auto;
     }
 
     /*** Team Players & Staff Section ***/
