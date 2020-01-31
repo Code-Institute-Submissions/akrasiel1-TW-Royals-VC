@@ -91,6 +91,7 @@ html {
 }
 
 .nav-list-sm {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,7 +105,7 @@ html {
 }
 
 .nav-link-sm {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 400;
     color: #fafafa;
     text-decoration: none;
@@ -236,7 +237,7 @@ html {
     font-weight: 700;
     margin-top: 2rem;
     opacity: 0;
-    animation: fade-in 3.5s forwards 2.7s;
+    animation: fade-right 1.5s forwards 2.5s;
     backface-visibility: hidden;
 }
 
@@ -284,14 +285,14 @@ html {
   .item1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    background: url("../images/news-1.jpg") no-repeat 70% 20%;
+    background: url("../images/news/news-1.jpg") no-repeat 70% 20%;
     font-size: 2rem;  
   }
   
   .item2 {
     grid-column: 3 / span 2;
     grid-row: 1;
-    background: url("../images/news-2.jpg") no-repeat 50% 10%;
+    background: url("../images/news/news-2.jpg") no-repeat 50% 10%;
     font-size: 1.8rem;
   }
 
@@ -300,11 +301,11 @@ html {
   }
 
   .item3 {
-      background: url("../images/news-3.jpg") no-repeat center;
+      background: url("../images/news/news-3.jpg") no-repeat center;
   }
 
   .item4 {
-    background: url("../images/news-4.jpg") no-repeat center;
+    background: url("../images/news/news-4.jpg") no-repeat center;
 }
 
   [class*="item"] {
@@ -524,11 +525,39 @@ tbody .bold {
 /*** Club History Section ***/
 
 #history {
-    background: url('../images/hero/hero-history.jpg') no-repeat 60% 0;
+    background: url('../images/hero/hero-history.jpg') no-repeat 80% 0;
     background-size: cover;
     height: 100vh;
     position: relative;
 }
+
+/*** Trophies Section ***/
+
+.trophies-container {
+    margin: 3rem 0;
+    display: grid;
+}
+
+.comp {
+    text-align: center;
+    color: #1d2e7c;
+    margin: 2rem 0;
+}
+
+.comp img {
+    height: 25rem;
+}
+
+.comp-description h3 {
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+.comp-description h4 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
 
 
 
@@ -720,7 +749,7 @@ article p {
 .form-container {
     width: 100%;
     background: linear-gradient(90deg, rgba(250, 250, 250, .6) 0%, rgba(250, 250, 250, .6) 50%, transparent 50%), 
-                url("../images/form-bg.jpg") no-repeat center;
+                url("../images/other/form-bg.jpg") no-repeat center;
     background-size: cover;
     height: 80rem;
     border-radius: 3px;
@@ -864,12 +893,14 @@ button {
     }
 }
 
-@keyframes fade-in {
+@keyframes fade-right {
     from {
         opacity: 0;
+        margin-left: 7rem;
     }
     to {
         opacity: 1;
+        margin-left: 0;
     }
 }
 
@@ -890,12 +921,12 @@ button {
 
     /*** Navigation & Hero Section ***/
     .hero {
-        font-size: 6rem;
+        font-size: 7rem;
         padding-left: 5%;
     }
 
     .hero span {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     /*** News Section ***/
@@ -913,7 +944,7 @@ button {
     .item2 {
         grid-column: 1 / span 1;
         grid-row: 2;
-        background: url("../images/news-2.jpg") no-repeat 50% 25%;
+        background: url("../images/news/news-2.jpg") no-repeat 50% 25%;
         font-size: 1.8rem;
       }
 
@@ -1015,6 +1046,12 @@ button {
         font-weight: 700;
     }
 
+    /*** Trophies Section ***/
+
+    .trophies-container {
+        grid-template-columns: repeat(2,  1fr);
+    }
+
     /*** Contact Section ***/
 
     .form-container {
@@ -1025,7 +1062,7 @@ button {
         width: 100%;
         padding: 2rem;
         background: linear-gradient(90deg, rgba(250, 250, 250, .6) 0%, rgba(250, 250, 250, .6) 100%), 
-                    url("../images/form-bg.jpg") no-repeat center;
+                    url("../images/other/form-bg.jpg") no-repeat center;
         background-size: cover;
         height: 80rem;
     }
@@ -1167,6 +1204,14 @@ button {
             flex-direction: row;
             justify-content: space-between;
         }
+
+    /*** Trophies Section ***/
+
+        .trophies-container {
+            grid-template-columns: repeat(4,  1fr);
+        }
+    
+
     /*** Team Players & Staff Section ***/
 
         .players-container {
