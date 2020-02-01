@@ -1279,7 +1279,7 @@ button {
 @media (min-width: 1200px) {
 
     html {
-        font-size: 62.5%;
+        font-size: 62.5%; /*** Represents default 10px, where browser's default is 16px - 100%/16 ***/
     }
 
     /*** News Section ***/
