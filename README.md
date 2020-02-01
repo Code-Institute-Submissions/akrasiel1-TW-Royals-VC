@@ -20,6 +20,7 @@
 ## 3. _Technical Analysis_
 
 <p>The website consists of 5 pages and has been built using different CSS approaches. The styling has been done using a combination of flexbox, floats and CSS grid. Not necessarily a consistent approach, but it helped me understand how each of the methods work.</p>
+<p>I also relied on relative units and percentages rather than using pixel values (only exception being border values and box-shadow values). This approach greatly simplified and reduced the amount of time I had to spend on responsive design.</p>
 <p>Each page has a navigation menu with position fixed on top, with links to all 5 sections of the website. In desktop version, the currently visited section is underlined with the class <em><b>active</b></em>. On hovering the other links, the same underline takes place.</p>
 <p>Each page has a different hero image that spans across 100% of the viewport height and has text that has been animated by using keyframes and transitions.</p>
 <p> The footer is consistent in every page and has essential information about the Club, links to social networks and a newsletter subscription form. The footer is the only section of the project that uses Font Awesome.</p>
