@@ -146,9 +146,9 @@ Automated testing run on the following:
 
 ### Other Known Issues
 
-+When submitting form, user is redirected on a new page showing a 404 error
-+On mobile and small tablet devices, whilst changing page with hamburger nav menu then hitting the back button, the menu will not disappear
-+When clicking to links within the website that are not part of the nav menu, they may present a "skipping effect", redirecting either to top of section or to top of homepage
++ When submitting form, user is redirected on a new page showing a 404 error
++ On mobile and small tablet devices, whilst changing page with hamburger nav menu then hitting the back button, the menu will not disappear
++ When clicking to links within the website that are not part of the nav menu, they may present a "skipping effect", redirecting either to top of section or to top of homepage
 
 
 ## _Final Notes, Credits & Acknowledgements_
