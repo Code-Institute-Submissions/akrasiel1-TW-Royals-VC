@@ -137,9 +137,12 @@ Although website renders as supposed to in the first 4 browsers, compatibility i
 
 Automated testing run on the following:
 
-+[W3C](https://validator.w3.org/)
-+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-  -Validator show message "Congratulations! No Error Found". However, 21 warnings are shown, all related to Font Awesome
++ [W3C Validator](https://validator.w3.org/)
+    - No errors or warnings to show when running test
+
++ [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    - Validator show message "Congratulations! No Error Found". However, 21 warnings are shown, all related to Font Awesome
+
 
 ### Other Known Issues
 
